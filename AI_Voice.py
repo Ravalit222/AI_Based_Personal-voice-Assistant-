@@ -215,7 +215,7 @@ if __name__ == "__main__": # main function for all user defined tasks
 
         elif "calculate" in query:
             srg = sr.Recognizer()
-            with srg.Microphone() as source:
+            with sr.Microphone() as source:
                 speak("Ready")
                 print("Listening...")
                 srg.adjust_for_ambient_noise(source)
