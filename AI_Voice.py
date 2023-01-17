@@ -115,14 +115,14 @@ if __name__ == "__main__": # main function for all user defined tasks
             os.startfile(os.path.join(music_player_directory, random.choice(songs)))
 
         elif 'close music' in query: # turn off system music player
-            os.system("taskkill /f /im Music.UI.exe")
+            os.system("taskkill /f /im Microsoft.Media.Player.exe")
 
         elif 'play kgf 2 movie' in query: # turn on system movie player
-            movie_directory = "C:\\Users\\tsaik\\Videos"
+            movie_directory = "C:\\Users\\tsaik\\Videos\\kgf - 2.mp4"
             os.startfile(movie_directory)
 
         elif 'close movie' in query: # turn off system music player
-            os.system("taskkill /f /im VLC.UNIVERSAL.exe")
+            os.system("taskkill /f /im Microsoft.Media.Player.exe")
 
         elif "volume up" in query: # increasing system volume
             pyautogui.press("volumeup")
@@ -250,7 +250,7 @@ if __name__ == "__main__": # main function for all user defined tasks
             pyautogui.write(file_contents, interval=0.1) # writing into the file
 
         elif "save notepad file" in query: # file save
-            pyautogui.hotkey('ctrl', 's')
+            pyautogui.hotkey('Ctrl', 'S')
             time.sleep(3)
             path = os.getcwd()
             speak('tell me a name for the file')
